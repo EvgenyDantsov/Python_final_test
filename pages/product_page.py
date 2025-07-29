@@ -2,10 +2,15 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 from .base_page import BasePage
+from .basket_page import BasketPage
 from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
+    def go_to_basket_page(self):
+        super().go_to_basket_page()
+        return BasketPage(self.browser, self.browser.current_url)
+
     def should_be_product_page(self):
         self.should_be_add_button()
         self.add_to_basket()

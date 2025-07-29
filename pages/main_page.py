@@ -1,7 +1,8 @@
 from .base_page import BasePage
-from .locators import MainPageLocators
+from .basket_page import BasketPage
 
 
 class MainPage(BasePage):
-    def __init__(self, *args, **kwargs):
-        super(MainPage, self).__init__(*args, **kwargs)
+    def go_to_basket_page(self):
+        super().go_to_basket_page()
+        return BasketPage(self.browser, self.browser.current_url)
