@@ -16,3 +16,4 @@ class ProductPageLocators():
     PRODUCT_PRICE = (By.CSS_SELECTOR, "p.price_color")
     ALERT_PRODUCT_NAME = (By.CSS_SELECTOR, "div.alert-success strong")
     ALERT_PRODUCT_PRICE = (By.CSS_SELECTOR, "div.alert-info strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "div.alert-success")
