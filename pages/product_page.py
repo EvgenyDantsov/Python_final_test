@@ -36,12 +36,12 @@ class ProductPage(BasePage):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message did not disappear, but should have"
 
-    # def should_be_correct_product_name(self):
-    #     product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
-    #     alert_name = self.browser.find_element(*ProductPageLocators.ALERT_PRODUCT_NAME).text
-    #     assert product_name == alert_name, "Wrong product name in alert"
-    #
-    # def should_be_correct_product_price(self):
-    #     product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
-    #     alert_price = self.browser.find_element(*ProductPageLocators.ALERT_PRODUCT_PRICE).text
-    #     assert product_price == alert_price, "Wrong price in alert"
+    def should_be_correct_product_name(self):
+        product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
+        alert_name = self.browser.find_element(*ProductPageLocators.ALERT_PRODUCT_NAME).text
+        assert product_name == alert_name, "Wrong product name in alert"
+
+    def should_be_correct_product_price(self):
+        product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
+        alert_price = self.browser.find_element(*ProductPageLocators.ALERT_PRODUCT_PRICE).text
+        assert product_price == alert_price, "Wrong price in alert"
