@@ -26,7 +26,6 @@ class ProductPage(BasePage):
             EC.element_to_be_clickable(ProductPageLocators.BUTTON_BASKET)
         )
         button_basket.click()
-        #self.solve_quiz_and_get_code()
 
     def should_not_be_success_message(self):
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
